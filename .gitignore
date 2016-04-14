@@ -83,4 +83,4 @@ data/
 # Linux
 *.swp
 
-web/db.sqlite3
+bliss_moore/db.sqlite3

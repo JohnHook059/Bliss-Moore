@@ -13,8 +13,8 @@ def cats(request):
 def gallery(request):
     return render(request, 'gallery.html')
 
-def forum(request):
-    return render(request, 'forum.html')
+def articles(request):
+    return render(request, 'arcticles.html')
 
 def contacts(request):
     return render(request, 'contacts.html')

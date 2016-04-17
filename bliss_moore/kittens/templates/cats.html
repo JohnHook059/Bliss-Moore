@@ -1,5 +1,32 @@
 {% extends "base.html" %}
 
 {% block body %}
-    Here be cats
+    <table border="1">
+        <th>Имя</th>
+        <th>Цвет</th>
+        <th>Пол</th>
+        <th>Порода</th>
+        <th>ДР</th>
+        <th>Папа</th>
+        <th>Мама</th>
+        <th>Котёнок</th>
+        <th>Помёт</th>
+        <th>Статус</th>
+        {% for cat in args %}
+             <tr>
+                 <td> {{ cat.name }} </td>
+                 <td> {{ cat.color }} </td>
+                 <td> {{ cat.male }} </td>
+                 <td> {{ cat.breed }} </td>
+                 <td> {{ cat.birthday }} </td>
+                 <td> {{ cat.father }} </td>
+                 <td> {{ cat.mother }} </td>
+                 <td> {{ cat.kitten }} </td>
+                 <td> {{ cat.litter }} </td>
+                 <td> {{ cat.status }} </td>
+            </tr>
+        {% endfor %}
+
+
+     </table>
 {% endblock %}

@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
 {% block body %}
-    Here be news
+    {% for article in args %}
+        {% if article.is_new == True %}
+            <a> <b> {{ article.title }} </b> </a> <br>
+            {{ article.text }}
+            <br>
+        {% endif %}
+    {% endfor %}
 {% endblock %}

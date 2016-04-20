@@ -1,13 +1,11 @@
 {% extends "base.html" %}
 
 {% block body %}
-    {% if not args %}
-        There isn't articles ;( <br> Add articles in admin panel
-    {% else %}
-        {% for article in args %}
+    {% for article in args %}
+        {% if article.is_article == True %}
             <a> <b> {{ article.title }} </b> </a> <br>
-            <p> {{ article.text }} </p>
+            {{ article.text }}
             <br>
-        {% endfor %}
-    {% endif %}
+        {% endif %}
+    {% endfor %}
 {% endblock %}

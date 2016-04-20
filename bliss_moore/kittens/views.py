@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Cat
+from .models import Cat, Article
 
 
 def index(request):
@@ -34,7 +34,12 @@ def gallery(request):
 
 
 def articles(request):
-    return render(request, 'articles.html')
+#    array_articles = Article.object.all()
+#    list_articles = []
+#    for article in array_articles:
+#        list_articles.append([article.title, article.text])
+#    return render(request, 'articles.html', {'args': list_articles})
+    return render(request, 'articles.html', {'args': Article.objects.all()})
 
 
 def contacts(request):

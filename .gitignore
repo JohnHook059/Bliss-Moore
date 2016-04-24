@@ -84,3 +84,4 @@ data/
 *.swp
 
 bliss_moore/db.sqlite3
+bliss_moore/kittens/static

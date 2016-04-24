@@ -1,5 +1,7 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block body %}
     Here be photos
+    <img src="{% static 'a.jpg' %}" height="200"  />
 {% endblock %}
